@@ -31,19 +31,19 @@ string ConvertToVietnamese::convertNumberToString(long number) {
     }
     else if (number < 1000000) {
         if (number % 1000 < 100) {
-            return convertNumberToString(number / 1000) + " nghin" + ((number % 1000 != 0) ? " khong tram" + ((number % 1000 < 10)?" linh " + convertNumberToString(number % 1000): convertNumberToString(number % 1000)) : "");
+            return convertNumberToString(number / 1000) + " nghin" + ((number % 1000 != 0) ? " khong tram " + ((number % 1000 < 10)?"linh " + convertNumberToString(number % 1000): convertNumberToString(number % 1000)) : "");
         }
         return convertNumberToString(number / 1000) + " nghin " + convertNumberToString(number % 1000);
     }
     else if (number < 1000000000) {
         if (number % 1000000 < 100000) {
-            return convertNumberToString(number / 1000000) + " trieu" + ((number % 1000000 != 0) ? " khong tram" + ((number % 1000000 < 10000) ? " linh " + convertNumberToString(number % 1000000) : convertNumberToString(number % 1000000)) : "");
+            return convertNumberToString(number / 1000000) + " trieu" + ((number % 1000000 != 0) ? " khong tram " + ((number % 1000000 < 10000) ? "linh " + convertNumberToString(number % 1000000) : convertNumberToString(number % 1000000)) : "");
         }
         return convertNumberToString(number / 1000000) + " trieu" + convertNumberToString(number % 1000000);
     }
     else if (number < 1000000000000) {
         if (number % 1000000000 < 100000000) {
-            return convertNumberToString(number / 1000000000) + " ty" + ((number % 1000000000 != 0) ? " khong tram" + ((number % 1000000000 < 10000000) ? " linh " + convertNumberToString(number % 1000000000) : convertNumberToString(number % 1000000000)) : "");
+            return convertNumberToString(number / 1000000000) + " ty" + ((number % 1000000000 != 0) ? " khong tram " + ((number % 1000000000 < 10000000) ? "linh " + convertNumberToString(number % 1000000000) : convertNumberToString(number % 1000000000)) : "");
         }
         return convertNumberToString(number / 1000000000) + " ty" + convertNumberToString(number % 1000000000);
     }
